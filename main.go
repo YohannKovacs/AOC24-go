@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	f, err := os.Open("./inputs/D1.txt")
+	f, err := os.Open("./inputs/D2.txt")
 	if err != nil {
 		log.Fatalf("Error while file open : %v", err)
 	}
@@ -21,7 +21,7 @@ func main() {
 		log.Fatalf("Error while reading from file : %v", err)
 	}
 
-	p1, err1, p2, err2 := solution.SolutionDay1(strings.Trim(string(buf), "\n"))
+	p1, err1, p2, err2 := solution.SolutionDay2(strings.Trim(string(buf), "\n"))
 	if err1 != nil && err2 != nil {
 		log.Fatalf("Error while finding solution of part 1 and part 2: %v %v", err1, err2)
 	}
